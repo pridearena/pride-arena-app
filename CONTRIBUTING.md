@@ -93,3 +93,7 @@ private get store(): RootStore {
 [React Native Elements](https://react-native-training.github.io/react-native-elements/docs/overview.html) are included on this project. Please try to work with these components before building your own.
 
 If their components aren't powerfull enough for your needs, just create a stateless component at `app/components/<component-name>` folder.
+
+# Google service
+
+To use Google service, like login-button, you must configure android studio to include google's package. [Check out this link for information](https://github.com/react-native-community/react-native-google-signin/blob/master/docs/android-guide.md).
