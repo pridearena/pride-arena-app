@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "766087048826",
+    "firebase_url": "https://pride-arena.firebaseio.com",
+    "project_id": "pride-arena",
+    "storage_bucket": "pride-arena.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766087048826:android:56825907a75827fb",
+        "android_client_info": {
+          "package_name": "com.pridearena"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766087048826-90o09p54at72ofavum8t5atjmf02uig3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pridearena",
+            "certificate_hash": "1af31bdaeaedf77a427fe5e45b411fb6c5cbcad1"
+          }
+        },
+        {
+          "client_id": "766087048826-i25ofhnqp5bgb5f5n60411kr3tq9gaep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "<ANDROID-API-KEY-HERE>"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766087048826-i25ofhnqp5bgb5f5n60411kr3tq9gaep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
