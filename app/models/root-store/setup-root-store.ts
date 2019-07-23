@@ -2,6 +2,7 @@ import { onSnapshot } from "mobx-state-tree"
 import { RootStoreModel, RootStore } from "./root-store"
 import { Environment } from "../environment"
 import * as storage from "../../utils/storage"
+import * as keychain from "../../utils/keychain"
 
 /**
  * The key we'll be saving our state as within async storage.
@@ -31,9 +32,14 @@ export async function setupRootStore() {
   // prepare the environment that will be associated with the RootStore.
   const env = await createEnvironment()
   try {
+    // get access code
+    const localPrideUserInfo = await keychain.load()
     // load data from storage
     data = (await storage.load(ROOT_STATE_STORAGE_KEY)) || {}
     rootStore = RootStoreModel.create(data, env)
+    if (rootStore.prideUser) {
+      rootStore.prideUser.setAccessToken(localPrideUserInfo.password)
+    }
   } catch (e) {
     // if there's any problems loading, then let's at least fallback to an empty state
     // instead of crashing.
@@ -49,7 +55,13 @@ export async function setupRootStore() {
   }
 
   // track changes & save to storage
-  onSnapshot(rootStore, snapshot => storage.save(ROOT_STATE_STORAGE_KEY, snapshot))
+  onSnapshot(rootStore, snapshot => {
+    storage.save(ROOT_STATE_STORAGE_KEY, snapshot)
+    const prideUser = rootStore.prideUser;
+    if (prideUser && prideUser.id && prideUser.accessToken) {
+      keychain.save(prideUser.id, prideUser.accessToken)
+    }
+  })
 
   return rootStore
 }
