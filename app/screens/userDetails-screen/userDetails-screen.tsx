@@ -79,7 +79,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
           <Input 
             placeholder={translate("userDetailsScreen.phoneNumber")}
             value={this.store.prideUser.phoneNumber}
-            onChangeText={(text) => this.store.prideUser.setAddress(text)}
+            onChangeText={(text) => this.store.prideUser.setPhoneNumber(text)}
             leftIcon={
             <Icon
               name='home'/>
