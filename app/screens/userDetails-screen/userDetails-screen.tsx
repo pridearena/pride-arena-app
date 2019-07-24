@@ -28,12 +28,11 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
   person: Person;
   render () {
     this.person = new Person("Oren", "Shir");
-    const p = this.person;
     
     return (
       <Screen style={ROOT} preset="scroll">
         <Text preset="header" tx="userDetailsScreen.header" />
-        <Text preset="default" tx="userDetailsScreen.helloMessage" txOptions={p} />
+        <Text preset="default" tx="userDetailsScreen.helloMessage" txOptions={this.person} />
       </Screen>
     )
   }
