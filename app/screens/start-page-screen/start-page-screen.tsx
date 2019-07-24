@@ -63,12 +63,15 @@ export class StartPageScreen extends React.Component<StartPageScreenProps, Start
       const prideUser = this.store.setPrideUser({
         email: user.email,
         id: user.id,
-        inTheClosed: false,
+        inTheCloset: false,
         name: user.name,
         photo: user.photo,
         score: 0,
         prideTrust: 0,
-        bio: ""
+        bio: "",
+        address: "Vancouver, BC, Canada",
+        phoneNumber: "123-456-7890",
+        gender: "Non-Gender Binary"
       });
       prideUser.setAccessToken(tokens.accessToken);
     } catch (error) {
