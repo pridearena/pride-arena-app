@@ -45,7 +45,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setName(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='perm-identity'/>
             } 
           />
           <Input 
@@ -54,7 +54,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setAddress(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='location-city'/>
             } 
           />
           <Input 
@@ -63,7 +63,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setBio(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='info'/>
             } 
           />        
           <Text preset="bold" tx="userDetailsScreen.privateInformation" />
@@ -73,7 +73,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setEmail(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='email'/>
             } 
           />
           <Input 
@@ -82,7 +82,7 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setPhoneNumber(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='perm-device-information'/>
             } 
           />
           <Input 
@@ -91,12 +91,15 @@ export class UserDetailsScreen extends React.Component<UserDetailsScreenProps, {
             onChangeText={(text) => this.store.prideUser.setGender(text)}
             leftIcon={
             <Icon
-              name='home'/>
+              name='account-circle'/>
             } 
           />
           <Text preset="bold" tx="userDetailsScreen.privacySecurity" />
           <CheckBox 
+            title={translate("userDetailsScreen.privacyMode")}
             checked={this.store.prideUser.inTheCloset} 
+            checkedIcon='toggle-on'
+            uncheckedIcon='toggle-off'
             onPress={() => this.store.prideUser.setInTheCloset(!this.store.prideUser.inTheCloset)}
           />
           <Text preset="secondary" tx="userDetailsScreen.privacyModeInfo" />
