@@ -1,3 +1,4 @@
+require("../app/components/scroll-event-list/scroll-event-list.story")
 require("../app/components/pride-footer/pride-footer.story")
 require("../app/components/text/text.story")
 require("../app/components/button/button.story")

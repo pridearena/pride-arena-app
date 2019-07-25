@@ -1,17 +1,15 @@
 import { createStackNavigator } from "react-navigation"
-import { PrimaryNavigator } from "./primary-navigator"
 import { StartPageScreen } from "../screens/start-page-screen";
-import { DumpPageScreen } from "../screens/dump-page-screen";
+import { HomePageScreen } from "../screens/dump-page-screen";
 
 export const RootNavigator = createStackNavigator(
   {
-    primaryStack: { screen: PrimaryNavigator },
     startPage: { screen: StartPageScreen },
-    dumpPage: { screen: DumpPageScreen },
+    homePage: { screen: HomePageScreen },
   },
   {
     headerMode: "none",
     navigationOptions: { gesturesEnabled: false },
-    initialRouteName: "dumpPage",
+    initialRouteName: "startPage",
   },
 )

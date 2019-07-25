@@ -4,8 +4,13 @@ export const palette = {
   offWhite: "#e6e6e6",
   orange: "#FBA928",
   orangeDarker: "#EB9918",
-  lightGrey: "#939AA4",
-  lighterGrey: "#CDD4DA",
   angry: "#dd3333",
-  purple: "#800080"
+  purple: "#800080",
+  graniteGray: "#636363",
+  lightGrey: "#D1D1D1",
+  grainsboro: "#DBDBDB",
+  mayaBlue: "#55CDFC",
+  nadeshikoPink: "#F7A8B8",
+  xanadu: "#73877B",
+  mummysTomb: "#839788"
 }
