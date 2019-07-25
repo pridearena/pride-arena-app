@@ -6,7 +6,6 @@ import { color } from "../../theme"
 import { NavigationScreenProps } from "react-navigation"
 import { GoogleSignin, GoogleSigninButton, statusCodes } from "react-native-google-signin"
 import { RootStore } from "../../models/root-store";
-import { PrideUserModel } from "../../models/pride-user";
 
 export interface StartPageScreenProps extends NavigationScreenProps<{}> {
   rootStore?: RootStore
@@ -17,7 +16,7 @@ export interface StartPageScreenState {
 }
 
 const ROOT: ViewStyle = {
-  backgroundColor: color.background
+  backgroundColor: color.palette.mayaBlue
 }
 
 @inject("rootStore")
@@ -35,7 +34,7 @@ export class StartPageScreen extends React.Component<StartPageScreenProps, Start
     if (!this.store.prideUser) {
       GoogleSignin.configure()
     } else {
-      this.setState({isUserLoggedIn: true})
+      this.props.navigation.navigate("homePage")
     }
   }
 
@@ -90,6 +89,7 @@ export class StartPageScreen extends React.Component<StartPageScreenProps, Start
     } finally {
       if (this.store.prideUser) {
         this.setState({isUserLoggedIn: true})
+        this.props.navigation.navigate("homePage")
       }
     }
   }

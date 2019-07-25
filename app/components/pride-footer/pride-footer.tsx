@@ -1,7 +1,8 @@
 import * as React from "react"
 import { View } from "react-native"
 import BottomNavigation, { TabConfig, FullTab } from "react-native-material-bottom-navigation"
-import { Icon } from "react-native-elements"
+import { Icon, Divider } from "react-native-elements"
+import { color } from "../../theme";
 
 export enum TabKeys {
   profile = "profile",
@@ -43,18 +44,19 @@ export function PrideFooter(props: PrideFooterProps) {
       key: TabKeys.home,
       label: "Home",
       iconName: "home",
-      barColor: "#55CDFC"
+      barColor: color.palette.white
     },
     {
       key: TabKeys.profile,
       label: "Profile",
       iconName: "tag-faces",
-      barColor: "#F7A8B8"
+      barColor: color.palette.white
     }
   ]
 
   return (
     <View>
+      <Divider/>
       <BottomNavigation
         tabs={tabs}
         activeTab={props.activeTab}

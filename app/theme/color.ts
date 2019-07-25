@@ -23,7 +23,7 @@ export const color = {
   /**
    * The screen background.
    */
-  background: palette.purple,
+  background: palette.white,
   /**
    * The main tinting color.
    */
@@ -39,11 +39,11 @@ export const color = {
   /**
    * The default color of text in many components.
    */
-  text: palette.white,
+  text: palette.black,
   /**
    * Secondary information.
    */
-  dim: palette.lightGrey,
+  dim: palette.grainsboro,
   /**
    * Error messages and icons.
    */
