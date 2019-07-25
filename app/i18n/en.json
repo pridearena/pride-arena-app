@@ -22,8 +22,18 @@
   },
   "userDetailsScreen": 
   {
-    "header" : "User Details",
-    "helloMessage" : "Hello %{firstName} %{lastName}!"
+    "helloMessage": "Hello %{name}",
+    "basicProfile": "BASIC PROFILE",
+    "privateInformation": "PRIVATE INFORMATION",
+    "bio": "Here is a little bit about me",
+    "name": "Enter your name",
+    "address": "Enter your address",
+    "email": "E-Mail",
+    "phoneNumber": "Phone number",
+    "gender": "Gender description",
+    "privacySecurity": "PRIVACY & SECURITY",
+    "privacyMode": "Private Mode",
+    "privacyModeInfo": "If you don't feel combortable sharing your information with other users, enable this feature to only share your profile info with event owners."
   },
   "storybook": {
     "placeholder": "Placeholder",
